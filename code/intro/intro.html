@@ -1,0 +1,39 @@
+<html>
+<title>vue.js intro</title>
+<script src="vue.js"></script>
+<script>
+
+</script>
+<body>
+
+<div id="app">
+  {{ message }}
+</div>
+
+<div id="app-2">
+  <span v-bind:title="message">
+    Hover your mouse over me for a few seconds
+    to see my dynamically bound title!
+  </span>
+</div>
+
+<div id="app-3" onmouseover="app3visibility()">
+  <span v-if="seen">Now you see me</span>
+</div>
+
+<div id="app-4">
+  <ol>
+    <li v-for="todo in todos">
+      {{ todo.text }}
+    </li>
+  </ol>
+</div>
+
+<div id="app-5">
+  <p>{{ message }}</p>
+  <button v-on:click="changeColor">Change My Color</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
